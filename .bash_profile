@@ -19,7 +19,6 @@ export PS1=" \[\033[36m\]\u \[\033[33m\]\W\[\033[32m\]\$(parse_git_branch)\[\033
 set -o vi
 bind 'set show-mode-in-prompt on'
 
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
 
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+#export NVM_DIR="$HOME/.nvm" . "/usr/local/opt/nvm/nvm.sh"

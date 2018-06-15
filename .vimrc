@@ -19,7 +19,14 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ayu-theme/ayu-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'ctrlp.vim'
+"Plugin 'kien/ctrlp.vim'
+
+" Ruby / Rails
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rbenv'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+"
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -78,4 +85,12 @@ let ayucolor="mirage"
 colorscheme ayu
 let g:airline_theme='luna'
 
+"For Ruby Indentation
+:autocmd Filetype ruby set softtabstop=2
+:autocmd Filetype ruby set sw=2
+:autocmd Filetype ruby set ts=2
+
+":autocmd Filetype html set softtabstop=2
+":autocmd Filetype html set sw=2
+":autocmd Filetype html set ts=2
 

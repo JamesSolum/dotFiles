@@ -19,10 +19,12 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ayu-theme/ayu-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/nerdcommenter'
 "Plugin 'kien/ctrlp.vim'
 
 " Ruby / Rails
 Plugin 'tpope/vim-rails'
+Plugin 'lucapette/vim-ruby-doc'
 Plugin 'tpope/vim-rbenv'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
@@ -87,10 +89,17 @@ let g:airline_theme='luna'
 
 "For Ruby Indentation
 :autocmd Filetype ruby set softtabstop=2
+:autocmd Filetype ruby set expandtab
 :autocmd Filetype ruby set sw=2
 :autocmd Filetype ruby set ts=2
 
-":autocmd Filetype html set softtabstop=2
-":autocmd Filetype html set sw=2
-":autocmd Filetype html set ts=2
+:autocmd Filetype html set softtabstop=2
+:autocmd Filetype html set sw=2
+:autocmd Filetype html set ts=2
+
+"Macro for matching (e.g. do/end)
+runtime macros/matchit.vim
+
+"For switching tabs and spaces
+set tabstop=2 shiftwidth=2 expandtab
 

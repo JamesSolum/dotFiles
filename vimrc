@@ -25,6 +25,10 @@ Plugin 'ngmy/vim-rubocop'
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-scripts/file-line'
 
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
+Plugin 'tomasr/molokai'
+
 "Tags
 "Plugin 'ludovicchabant/vim-gutentags'
 "Plugin 'kien/ctrlp.vim'
@@ -92,10 +96,11 @@ set background=dark
 set laststatus=2
 set backspace=indent,eol,start
 
+" Colors!
 set termguicolors
-let ayucolor="mirage"
-colorscheme ayu
-let g:airline_theme='luna'
+let ayucolor="dark"
+colorscheme molokai
+let g:airline_theme='ayu'
 
 "For Ruby Indentation
 :autocmd Filetype ruby set softtabstop=2

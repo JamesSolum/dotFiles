@@ -24,9 +24,6 @@ Plugin 'Siphalor/vim-atomified'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-scripts/file-line'
-
-Plugin 'xolox/vim-easytags'
-Plugin 'xolox/vim-misc'
 Plugin 'tomasr/molokai'
 
 "Tags

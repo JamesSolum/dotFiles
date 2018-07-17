@@ -20,6 +20,13 @@ Plugin 'ayu-theme/ayu-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'Siphalor/vim-atomified'
+Plugin 'ngmy/vim-rubocop'
+Plugin 'mileszs/ack.vim'
+Plugin 'vim-scripts/file-line'
+
+"Tags
+"Plugin 'ludovicchabant/vim-gutentags'
 "Plugin 'kien/ctrlp.vim'
 
 " Ruby / Rails
@@ -47,6 +54,9 @@ filetype plugin indent on    " required
 "set foldlevel=99
 " Enable folding with spacebar
 nnoremap <space> za
+
+"Tagbar remap
+nmap <F8> :TagbarToggle<CR>
 
 " Split navigation remapping
 nnoremap <C-J> <C-W><C-J>
@@ -103,3 +113,17 @@ runtime macros/matchit.vim
 "For switching tabs and spaces
 set tabstop=2 shiftwidth=2 expandtab
 
+"FZF remapping
+map <C-g> :GFiles<CR>
+map <C-p> :FZF /<CR>
+
+" Airline settings
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+" For da buffers
+nmap <Left> :bprev<CR>
+nmap <Right> :bnext<CR>
+
+" Copy selection and search
+vnoremap // y/<C-R>"<CR>

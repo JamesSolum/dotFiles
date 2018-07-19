@@ -22,6 +22,7 @@ Plugin 'vim-scripts/file-line' " lets you open a file at a specific line
 Plugin 'qpkorr/vim-bufkill' " Remove buffers w/out removing splits
 Plugin 'junegunn/fzf' " Fuzzy finder
 Plugin 'junegunn/fzf.vim' "Fuzzy finder vim --??? REsearch this
+Plugin 'yuttie/comfortable-motion.vim' "for smooth scrolling
 
 " Vim Themes
 Plugin 'ayu-theme/ayu-vim'

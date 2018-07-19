@@ -27,7 +27,7 @@ parse_git_branch() {
 }
 #export PS1="[\u@\[\033[36m\]\h\[\033[33m\] \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\]]\$ " #Prompt with git branch and $
 #export PS1=" \[\033[36m\]\u \[\033[33m\]\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] >> " # Prompt with git branch and >>
-export PS1=" \[\033[36m\]\u \[\033[33m\]\w\[\033[32m\]\$(parse_git_branch)\[\033[00m\] >> " # Prompt w/ pwd and git branch
+export PS1=" \[\033[36m\]\u \[\033[33m\]\w\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ " # Prompt w/ pwd and git branch
 
 # Set Vi Mode
 set -o vi

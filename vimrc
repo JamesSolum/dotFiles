@@ -22,6 +22,8 @@ Plugin 'vim-scripts/file-line' " lets you open a file at a specific line
 Plugin 'qpkorr/vim-bufkill' " Remove buffers w/out removing splits
 Plugin 'junegunn/fzf' " Fuzzy finder
 Plugin 'junegunn/fzf.vim' "Fuzzy finder vim --??? REsearch this
+Plugin 'yuttie/comfortable-motion.vim' "for smooth scrolling
+Plugin 'tpope/vim-fugitive' " git integration
 
 " Vim Themes
 Plugin 'ayu-theme/ayu-vim'
@@ -72,7 +74,7 @@ syntax on
 set smartindent
 inoremap <Nul> <C-n>
 set mouse=a
-set number
+set number relativenumber
 set background=dark
 set so=7
 
@@ -145,3 +147,17 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
  if has("autocmd")
      autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
  endif
+
+" Scrolling
+let g:comfortable_motion_friction = 640
+let g:comfortable_motion_air_drag = 16
+
+let g:comfortable_motion_no_default_key_mappings = 1
+let g:comfortable_motion_impulse_multiplier = 8  " Feel free to increase/decrease this value.
+nnoremap <silent> <C-d> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 2)<CR>
+nnoremap <silent> <C-u> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -2)<CR>
+nnoremap <silent> <C-f> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 4)<CR>
+nnoremap <silent> <C-b> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -4)<CR>
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1

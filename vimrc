@@ -74,6 +74,7 @@ inoremap <Nul> <C-n>
 set mouse=a
 set number
 set background=dark
+set so=7
 
 "For Powerline to appear in single windows
 set laststatus=2
@@ -127,3 +128,20 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 nmap <Left> :bprev<CR> 
 nmap <Right> :bnext<CR>
 set hidden " so we can switch buffers w/out needing to save them
+
+" Return to last edit position when opening files
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | ~
+     | endif
+
+" Delete trailing white space on save, useful for some filetypes ;)
+ fun! CleanExtraSpaces()
+     let save_cursor = getpos(".")
+     let old_query = getreg('/')
+     silent! %s/\s\+$//e
+     call setpos('.', save_cursor)
+     call setreg('/', old_query)
+ endfun
+
+ if has("autocmd")
+     autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
+ endif

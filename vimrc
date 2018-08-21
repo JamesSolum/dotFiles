@@ -74,7 +74,6 @@ syntax on
 set smartindent
 inoremap <Nul> <C-n>
 set mouse=a
-set number relativenumber
 set background=dark
 set so=7
 

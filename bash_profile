@@ -15,11 +15,12 @@ alias .='pwd'
 alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../../'
-alias eb='vim ~/.bash_profile' # Make sure to change to bashrc for linux
+alias eb='vim ~/.bashrc' # Make sure to change to bashrc for linux
 alias ev='vim ~/.vimrc'
 alias sb='source ~/.bash_profile' # Make sure to change for Linux
 alias rubo-check='git diff-tree -r --no-commit-id --name-only head origin/master | xargs rubocop'
 alias rubo-correct='git diff-tree -r --no-commit-id --name-only head origin/master | xargs rubocop --auto-correct'
+alias g='git' # git alias
 
 # Display git branch
 parse_git_branch() {
@@ -46,4 +47,3 @@ fe() {
   IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
   [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
 }
-

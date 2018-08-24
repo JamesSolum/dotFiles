@@ -23,7 +23,8 @@ Plugin 'qpkorr/vim-bufkill' " Remove buffers w/out removing splits
 Plugin 'junegunn/fzf' " Fuzzy finder
 Plugin 'junegunn/fzf.vim' "Fuzzy finder vim --??? REsearch this
 Plugin 'yuttie/comfortable-motion.vim' "for smooth scrolling
-Plugin 'tpope/vim-fugitive' " git integration
+Plugin 'tpope/vim-fugitive' " git integration 
+Plugin 'Valloric/YouCompleteMe' " auto completion  Installation guide: https://valloric.github.io/YouCompleteMe/#general-usage
 
 " Vim Themes
 Plugin 'ayu-theme/ayu-vim'

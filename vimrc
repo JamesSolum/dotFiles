@@ -75,7 +75,7 @@ syntax on
 set smartindent
 inoremap <Nul> <C-n>
 set mouse=a
-set number relativenumber
+set number
 set background=dark
 set so=7
 
@@ -145,3 +145,5 @@ nnoremap <silent> <C-b> :call comfortable_motion#flick(g:comfortable_motion_impu
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+
+let g:NERDCustomDelimiters = { 'eruby.yaml': { 'left': '#'} }

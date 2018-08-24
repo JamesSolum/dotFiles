@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
   name = James Solum
-  email = james.n.solum@gmail.com
+  email = james.solum@procore.com
 [alias]
   co = checkout
   st = status

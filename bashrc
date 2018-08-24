@@ -3,12 +3,12 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
 # Aliases
-alias ls='ls -GFh'
-alias ll='ls -lG'
+alias ls='ls -GFh --color=auto'
+alias ll='ls -lG --color=auto'
 alias a='alias'
-alias reset="osascript -e 'tell application \"System Events\" to tell process \"Terminal\" to keystroke \"k\" using command down'" # Because mac doesn't have reset by default
 alias r='reset'
 alias rm='rm -i' # prompt before deleting
+alias reset="osascript -e 'tell application \"System Events\" to tell process \"Terminal\" to keystroke \"k\" using command down'" # Because mac doesn't have reset by default
 alias c='clear'
 alias grep="grep --color"
 alias .='pwd'
@@ -17,7 +17,7 @@ alias ...='cd ../../'
 alias ....='cd ../../../'
 alias eb='vim ~/.bashrc' # Make sure to change to bashrc for linux
 alias ev='vim ~/.vimrc'
-alias sb='source ~/.bash_profile' # Make sure to change for Linux
+alias sb='source ~/.bashrc' # Make sure to change for Linux
 alias rubo-check='git diff-tree -r --no-commit-id --name-only head origin/master | xargs rubocop'
 alias rubo-correct='git diff-tree -r --no-commit-id --name-only head origin/master | xargs rubocop --auto-correct'
 alias g='git' # git alias
@@ -36,7 +36,6 @@ export PS1=" \[\033[36m\]\u \[\033[33m\]\w\[\033[32m\]\$(parse_git_branch)\[\033
 # Set Vi Mode
 set -o vi
 bind 'set show-mode-in-prompt on' # needs updated bash if on mac
-
 
 # fe [FUZZY PATTERN] - Open the selected file with the default editor
 #   - Bypass fuzzy finder if there's only one match (--select-1)

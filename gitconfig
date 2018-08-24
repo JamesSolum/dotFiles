@@ -10,6 +10,8 @@
   ap = add -p
   up = !git pull --rebase --prune $@ && git submodule update --init --recursive
   b = branch
+  pu = push -u origin HEAD
+  p = push
 [filter "lfs"]
   required = true
   clean = git-lfs clean -- %f

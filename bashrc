@@ -8,6 +8,7 @@ alias ll='ls -lG --color=auto'
 alias a='alias'
 alias r='reset'
 alias rm='rm -i' # prompt before deleting
+alias reset="osascript -e 'tell application \"System Events\" to tell process \"Terminal\" to keystroke \"k\" using command down'" # Because mac doesn't have reset by default
 alias c='clear'
 alias grep="grep --color"
 alias .='pwd'

@@ -24,6 +24,9 @@ Plugin 'junegunn/fzf' " Fuzzy finder
 Plugin 'junegunn/fzf.vim' "Fuzzy finder vim --??? REsearch this
 Plugin 'yuttie/comfortable-motion.vim' "for smooth scrolling
 Plugin 'tpope/vim-fugitive' " git integration
+Plugin 'vim-syntastic/syntastic' " syntax checker
+Plugin 'xolox/vim-session' " vim sessions https://github.com/xolox/vim-session
+Plugin 'xolox/vim-misc' " a dependency for vim-sessions
 
 " Vim Themes
 Plugin 'ayu-theme/ayu-vim'

@@ -28,6 +28,7 @@ Plugin 'Valloric/YouCompleteMe' " auto completion  Installation guide: https://v
 Plugin 'vim-syntastic/syntastic' " syntax checker
 Plugin 'xolox/vim-session' " vim sessions https://github.com/xolox/vim-session
 Plugin 'xolox/vim-misc' " a dependency for vim-sessions
+Plugin 'Yggdroot/indentLine' " for indent lines
 
 " Vim Themes
 Plugin 'ayu-theme/ayu-vim'
@@ -149,4 +150,5 @@ nnoremap <silent> <C-b> :call comfortable_motion#flick(g:comfortable_motion_impu
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
-let g:NERDCustomDelimiters = { 'eruby.yaml': { 'left': '#'} }
+let g:NERDCustomDelimiters = { 'eruby.yaml': { 'left': '#'} } " how to comment on eruby.yaml files
+

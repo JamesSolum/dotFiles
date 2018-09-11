@@ -45,3 +45,7 @@ fe() {
   IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
   [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
 }
+
+# Git Config 
+git config --global user.name "$GIT_USER_NAME"
+git config --global user.email "$GIT_EMAIL"

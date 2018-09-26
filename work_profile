@@ -1,0 +1,14 @@
+source ~/.mac_profile
+# Work Presets
+export GIT_EMAIL="james.solum@procore.com"
+export GIT_USER_NAME="James Solum"
+
+export PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
+eval "$(rbenv init -)"
+source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+
+# Local aliases
+alias serve='bundle exec rails s'
+alias s='serve'
+source /usr/local/opt/asdf/asdf.sh

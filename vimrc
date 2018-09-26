@@ -151,4 +151,3 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
 let g:NERDCustomDelimiters = { 'eruby.yaml': { 'left': '#'} } " how to comment on eruby.yaml files
-

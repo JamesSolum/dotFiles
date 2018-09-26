@@ -1,0 +1,11 @@
+# Mac specific Settings
+alias ls='ls -GFh' 
+alias ll='ls -lG' 
+alias reset="osascript -e 'tell application \"System Events\" to tell process \"Terminal\" to keystroke \"k\" using command down'" # Because mac doesn't have reset by default
+
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
+source ~/.bashrc
+

@@ -46,6 +46,10 @@ fe() {
   [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
 }
 
+# Custom settings
+source ~/.custom_bash_config
+
 # Git Config 
 git config --global user.name "$GIT_USER_NAME"
 git config --global user.email "$GIT_EMAIL"
+

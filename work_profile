@@ -1,7 +1,4 @@
 source ~/.mac_profile
-# Work Presets
-export GIT_EMAIL="james.solum@procore.com"
-export GIT_USER_NAME="James Solum"
 
 export PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
 eval "$(rbenv init -)"
@@ -11,4 +8,7 @@ export NVM_DIR="$HOME/.nvm"
 # Local aliases
 alias serve='bundle exec rails s'
 alias s='serve'
+alias migrate='bundle exec rake db:migrate && bundle exec rake db:migrate RAILS_ENV=test'
+alias rollback='bundle exec rake db:rollback step=1 && bundle exec rake db:rollback step=1 RAILS_ENV=test'
+alias clean_structure='bundle exec rake db:make_clean_structure'
 source /usr/local/opt/asdf/asdf.sh

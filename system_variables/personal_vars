@@ -1,5 +1,3 @@
 export GIT_EMAIL="james.n.solum@gmail.com"
 export GIT_USER_NAME="jamessolum"
 
-alias ls='ls -GFh --color' 
-alias ll='ls -lG --color' 

@@ -1,0 +1,5 @@
+
+Bashrc is the source of all common knowledge.  
+You then need to sym link a custom configuration from the custom_bash_configs folder as `.custom_bash_config` in your home directory
+also sym link your appropriate system variables to your home directory as `.custom_system_variables`
+

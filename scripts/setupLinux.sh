@@ -19,7 +19,7 @@ ln -s ~/git/dotFiles/tmux.conf ~/.tmux.conf
 ln -s ~/git/dotFiles/bashrc ~/.bashrc
 
 # Setup System variables
-ln -s ~/git/dotFiles/system_variables/work_vars ~/.custom_system_vars
+ln -s ~/git/dotFiles/system_variables/personal_vars ~/.custom_system_vars
 
 # Setup Generic Linux Profile
 ln -s ~/git/dotFiles/custom_bash_configs/linux_generic_profile ~/.bash_profile

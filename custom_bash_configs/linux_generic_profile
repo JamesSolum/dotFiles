@@ -1,0 +1,7 @@
+alias ls='ls -GFh --color' 
+alias ll='ls -lG --color' 
+
+if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
+  source ~/.bashrc
+fi
+

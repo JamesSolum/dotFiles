@@ -46,6 +46,12 @@ fe() {
   [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
 }
 
+
+# Fix this so it actuall works
+cob() {
+  git branch | fzf-tmux -d 15
+}
+
 # Custom settings
 source ~/.custom_bash_config
 

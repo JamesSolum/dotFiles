@@ -1,10 +1,8 @@
 set nocompatible              " required
 filetype off                  " required
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
@@ -16,12 +14,10 @@ Plugin 'tmhedberg/SimpylFold' " Fun folds
 Plugin 'vim-scripts/indentpython.vim' " For automatic indentation in python
 Plugin 'scrooloose/nerdtree' " Side menu for files
 Plugin 'vim-airline/vim-airline' " the vim bar at the bottom
-Plugin 'scrooloose/nerdcommenter' " For commenting? ??? research this
-Plugin 'mileszs/ack.vim' " For searching?
-Plugin 'vim-scripts/file-line' " lets you open a file at a specific line
+Plugin 'scrooloose/nerdcommenter' " Easy auto commenting
 Plugin 'qpkorr/vim-bufkill' " Remove buffers w/out removing splits
-Plugin 'junegunn/fzf' " Fuzzy finder
-Plugin 'junegunn/fzf.vim' "Fuzzy finder vim --??? REsearch this
+Plugin 'junegunn/fzf' "Fuzzy finder 
+Plugin 'junegunn/fzf.vim' "Fuzzy finder vim shortcuts
 Plugin 'yuttie/comfortable-motion.vim' "for smooth scrolling
 Plugin 'tpope/vim-fugitive' " git integration
 Plugin 'Valloric/YouCompleteMe' " auto completion  Installation guide: https://valloric.github.io/YouCompleteMe/#general-usage
@@ -29,6 +25,8 @@ Plugin 'vim-syntastic/syntastic' " syntax checker
 Plugin 'xolox/vim-session' " vim sessions https://github.com/xolox/vim-session
 Plugin 'xolox/vim-misc' " a dependency for vim-sessions
 Plugin 'Yggdroot/indentLine' " for indent lines
+Plugin 'mhinz/vim-startify' " change start screen for vim
+Plugin 'skywind3000/gutentags_plus' "automatically deal with tags
 
 " Vim Themes
 Plugin 'ayu-theme/ayu-vim'
@@ -60,9 +58,6 @@ filetype plugin indent on    " required
 "set foldlevel=99
 " Enable folding with spacebar
 nnoremap <space> za
-
-"Tagbar remap
-nmap <F8> :TagbarToggle<CR>
 
 " Split navigation remapping
 nnoremap <C-J> <C-W><C-J>

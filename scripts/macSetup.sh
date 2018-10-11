@@ -20,8 +20,12 @@ fi
 
 echo "Installing essential programs"
 brew cask install iterm2 spectacle spotify hyperswitch;
-brew install rg htop fzf tmux vim ctags;
+brew install rg htop tmux vim ctags;
 brew link vim; # override system provided vim
+
+echo "Setting up fzf"
+brew install fzf
+$(brew --prefix)/opt/fzf/install
 
 if [ ! -d ~/git ]; then
   echo "Making git folder"

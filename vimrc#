@@ -26,12 +26,9 @@ Plugin 'xolox/vim-session' " vim sessions https://github.com/xolox/vim-session
 Plugin 'xolox/vim-misc' " a dependency for vim-sessions
 Plugin 'Yggdroot/indentLine' " for indent lines
 Plugin 'mhinz/vim-startify' " change start screen for vim
-Plugin 'skywind3000/gutentags_plus' "automatically deal with tags
 
 " Vim Themes
-Plugin 'ayu-theme/ayu-vim'
 Plugin 'tomasr/molokai'
-Plugin 'nightsense/seabird'
 Plugin 'vim-airline/vim-airline-themes'
 
 " Ruby / Rails

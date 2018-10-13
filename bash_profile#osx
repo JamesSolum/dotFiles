@@ -6,3 +6,5 @@ alias reset="osascript -e 'tell application \"System Events\" to tell process \"
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
+
+source ~/.bashrc

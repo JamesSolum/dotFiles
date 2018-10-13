@@ -1,0 +1,19 @@
+# This is Git's per-user configuration file.
+[user]
+	name = jamessolum
+	email = james.n.solum@gmail.com
+[alias]
+  co = checkout
+  st = status
+  s = status
+  cob = checkout -b
+  ap = add -p
+  up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+  b = branch
+  pu = push -u origin HEAD
+  p = push
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process

@@ -77,14 +77,8 @@ fco() {
   git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
 }
 
-# Custom settings
-source ~/.custom_bash_config
-
-# Git Config 
-source ~/.custom_system_vars
-git config --global user.name "$GIT_USER_NAME"
-git config --global user.email "$GIT_EMAIL"
-
-
 # For fzf stuff
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Custom settings
+source ~/.custom_bash_config

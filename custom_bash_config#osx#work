@@ -10,4 +10,5 @@ alias migrate='bundle exec rake db:migrate && bundle exec rake db:migrate RAILS_
 alias rollback='bundle exec rake db:rollback step=1 && bundle exec rake db:rollback step=1 RAILS_ENV=test'
 alias resetdb='bundle exec rake db:drop db:create db:setup db:test:prepare'
 alias clean_structure='bundle exec rake db:make_clean_structure'
+
 source /usr/local/opt/asdf/asdf.sh

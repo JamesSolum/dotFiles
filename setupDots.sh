@@ -36,6 +36,7 @@ rightOS () {
   fi
 }
 
+# Is the file the right OS and the right Type
 rightFile () {
   local file=$2
   local symFile=`echo $2 | cut -d "#" -f2`
@@ -66,12 +67,33 @@ getRequestedType() {
   fi
 }
 
-requestedType=`getRequestedType $1`
-for filename in *; do
-  if rightFile $requestedType $filename; then
-    parsedFile=`parseFile $filename`
-    echo "success: $filename"
-    #ln -s $filename ~/."$parsedFile"
-  fi
-done
+setup() {
+  requestedType=`getRequestedType $1`
+  echo "Requested Type: $requestedType"
+  for filename in *; do
+    if rightFile $requestedType $filename; then
+      parsedFile=`parseFile $filename`
+      echo "linking: $parsedFile"
+      ln -s "$(pwd)/$filename" ~/."$parsedFile"
+    fi
+  done
+}
+
+tearDown() {
+  requestedType=`getRequestedType $1`
+  echo "Requested Type: $requestedType"
+  for filename in *; do
+    if rightFile $requestedType $filename; then
+      parsedFile=`parseFile $filename`
+      echo "deleting: $parsedFile"
+      rm ~/."$parsedFile"
+    fi
+  done
+}
+
+if [[ "$1" == "teardown" ]]; then
+  tearDown $2
+elif [[ "$1" == "setup" ]]; then
+  setup $2
+fi
 

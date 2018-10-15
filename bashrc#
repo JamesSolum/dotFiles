@@ -3,19 +3,15 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
 # Aliases
-alias r='reset'
 alias rm='rm -i' # prompt before deleting
 alias c='clear'
 alias grep="grep --color"
-alias .='pwd'
 alias ..='cd ../'
 alias ...='cd ../../'
 alias eb='vim ~/.bashrc' 
 alias ev='vim ~/.vimrc'
 alias sb='source ~/.bashrc' 
 alias sbp='source ~/.bash_profile'
-alias rubo-check='git diff-tree -r --no-commit-id --name-only head origin/master | xargs rubocop'
-alias rubo-correct='git diff-tree -r --no-commit-id --name-only head origin/master | xargs rubocop --auto-correct'
 
 # Git Aliases
 alias g='git' # git alias

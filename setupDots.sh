@@ -91,7 +91,7 @@ tearDown() {
   done
 }
 
-if [[ "$1" == "teardown" ]]; then
+if [[ "$1" == "clean" ]]; then
   tearDown $2
 elif [[ "$1" == "setup" ]]; then
   setup $2

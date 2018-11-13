@@ -9,8 +9,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
-Plugin 'tmhedberg/SimpylFold' " Fun folds
 Plugin 'vim-scripts/indentpython.vim' " For automatic indentation in python
 Plugin 'scrooloose/nerdtree' " Side menu for files
 Plugin 'vim-airline/vim-airline' " the vim bar at the bottom
@@ -20,10 +18,10 @@ Plugin 'junegunn/fzf' "Fuzzy finder
 Plugin 'junegunn/fzf.vim' "Fuzzy finder vim shortcuts
 Plugin 'yuttie/comfortable-motion.vim' "for smooth scrolling
 Plugin 'tpope/vim-fugitive' " git integration
-"Plugin 'Valloric/YouCompleteMe' " auto completion  Installation guide: https://valloric.github.io/YouCompleteMe/#general-usage
 Plugin 'vim-syntastic/syntastic' " syntax checker
 Plugin 'Yggdroot/indentLine' " for indent lines
-Plugin 'mhinz/vim-startify' " change start screen for vim also provides sessions
+Plugin 'editorconfig/editorconfig-vim' "editor config
+"Plugin 'Valloric/YouCompleteMe' " auto completion  Installation guide: https://valloric.github.io/YouCompleteMe/#general-usage
 
 " Vim Themes
 Plugin 'tomasr/molokai'
@@ -49,12 +47,6 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-" Enable Folding
-"set foldmethod=indent
-"set foldlevel=99
-" Enable folding with spacebar
-nnoremap <space> za
-
 " Split navigation remapping
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -70,45 +62,21 @@ syntax on
 set smartindent
 inoremap <Nul> <C-n>
 set mouse=a
-set number
+set number "line numbers
 set background=dark
-set so=7
+set scrolloff=7 "set number of context lines when scrolling
 
 "For Powerline to appear in single windows
 set laststatus=2
 set backspace=indent,eol,start
 
-" Colors && Themeing!
+" Colors && Theming!
 set termguicolors
 colorscheme molokai
 let g:airline_theme='luna'
 
-" Ruby Formatting
-:autocmd Filetype ruby set softtabstop=2
-:autocmd Filetype ruby set expandtab
-:autocmd Filetype ruby set sw=2
-:autocmd Filetype ruby set ts=2
-
-" Html Formatting
-:autocmd Filetype html set softtabstop=2
-:autocmd Filetype html set sw=2
-:autocmd Filetype html set ts=2
-
-" Python Formatting
-au BufNewFile,BufRead *.py
-            \set tabstop=4
-            \set softtabstop=4
-            \set shiftwidth=4
-            \set textwidth=79
-            \set expandtab
-            \set autoindent
-            \set fileformat=unix
-
 "Macro for matching (e.g. do/end)
 runtime macros/matchit.vim
-
-"For switching tabs and spaces
-set tabstop=2 shiftwidth=2 expandtab
 
 "FZF remapping: 
 "    ctrl-g will let you search your current git repo files
@@ -139,8 +107,6 @@ nnoremap <silent> <C-b> :call comfortable_motion#flick(g:comfortable_motion_impu
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-
-let g:NERDCustomDelimiters = { 'eruby.yaml': { 'left': '#'} } " how to comment on eruby.yaml files
 
 " Devicon setup
 set encoding=UTF-8

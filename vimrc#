@@ -74,7 +74,7 @@ set backspace=indent,eol,start
 " Colors && Theming!
 set termguicolors
 colorscheme molokai
-let g:airline_theme='luna'
+let g:airline_theme='raven'
 
 "Macro for matching (e.g. do/end)
 runtime macros/matchit.vim

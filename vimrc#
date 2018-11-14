@@ -21,6 +21,7 @@ Plugin 'tpope/vim-fugitive' " git integration
 Plugin 'vim-syntastic/syntastic' " syntax checker
 Plugin 'Yggdroot/indentLine' " for indent lines
 Plugin 'editorconfig/editorconfig-vim' "editor config
+Plugin 'christoomey/vim-tmux-navigator'
 "Plugin 'Valloric/YouCompleteMe' " auto completion  Installation guide: https://valloric.github.io/YouCompleteMe/#general-usage
 
 " Vim Themes

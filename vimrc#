@@ -9,7 +9,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'vim-scripts/indentpython.vim' " For automatic indentation in python
 Plugin 'scrooloose/nerdtree' " Side menu for files
 Plugin 'vim-airline/vim-airline' " the vim bar at the bottom
 Plugin 'scrooloose/nerdcommenter' " Easy auto commenting
@@ -22,6 +21,7 @@ Plugin 'vim-syntastic/syntastic' " syntax checker
 Plugin 'Yggdroot/indentLine' " for indent lines
 Plugin 'editorconfig/editorconfig-vim' "editor config
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'dart-lang/dart-vim-plugin'
 "Plugin 'Valloric/YouCompleteMe' " auto completion  Installation guide: https://valloric.github.io/YouCompleteMe/#general-usage
 
 " Vim Themes

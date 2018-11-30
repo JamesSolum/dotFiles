@@ -43,6 +43,13 @@ if [ ! -d ~/git/dotFiles ]; then
     vim +PluginInstall +qall # Install vim plugins
   fi
 
+  # Tmux
+  if [ -f ~/.tmux ]; then
+    echo "Installing TPM (tmux package manager)"
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  fi
+
+
   echo "Sym linking dot files"
   #Choose which script to symlink based
 

@@ -20,3 +20,5 @@ alias rubo-correct='git diff-tree -r --no-commit-id --name-only head origin/mast
 
 # Postgres installation with ASDF
 source /usr/local/opt/asdf/asdf.sh
+
+export PATH=$PATH:`pwd`/flutter/bin

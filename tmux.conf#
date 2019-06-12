@@ -16,6 +16,11 @@ bind-key -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
 
 set -g status-right "#{sysstat_cpu} | #{sysstat_mem} | #{sysstat_swap} | #{sysstat_loadavg} | #[fg=cyan]#(echo $USER)#[default]@#H"
 
+bind-key -r ‘+’ resize-pane -U 10
+bind-key -r ‘-’ resize-pane -D 10
+bind-key -r ‘<’ resize-pane -L 10
+bind-key -r ‘>’ resize-pane -R 10
+
 # List of plugins
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
@@ -29,5 +34,4 @@ set -g @plugin 'samoshkin/tmux-plugin-sysstat'
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run -b '~/.tmux/plugins/tpm/tpm'
 
-
-
+set-option -g default-shell "/bin/bash"

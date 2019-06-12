@@ -8,3 +8,10 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
 fi
 
 source ~/.bashrc
+
+export JENV_SHELL=bash
+export JENV_LOADED=1
+unset JAVA_HOME
+
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"

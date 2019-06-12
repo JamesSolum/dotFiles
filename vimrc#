@@ -22,6 +22,13 @@ Plugin 'Yggdroot/indentLine' " for indent lines
 Plugin 'editorconfig/editorconfig-vim' "editor config
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'dart-lang/dart-vim-plugin'
+Plugin 'ludovicchabant/vim-gutentags' "managing ctags
+Plugin 'kshenoy/vim-signature' "Shows marks on the side
+
+
+" Typescript
+Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
 "Plugin 'Valloric/YouCompleteMe' " auto completion  Installation guide: https://valloric.github.io/YouCompleteMe/#general-usage
 
 " Vim Themes
@@ -60,7 +67,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " Basics
 syntax on  
-set smartindent
 inoremap <Nul> <C-n>
 set mouse=a
 set number "line numbers
@@ -111,3 +117,12 @@ let g:airline_powerline_fonts = 1
 
 " Devicon setup
 set encoding=UTF-8
+
+filetype plugin indent on
+" show existing tab with 2 spaces width
+set tabstop=2
+" On pressing tab, insert 2 spaces
+set expandtab
+set shiftwidth=2
+
+

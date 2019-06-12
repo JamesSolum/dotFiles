@@ -13,12 +13,13 @@ alias s='serve'
 alias migrate='bundle exec rake db:migrate && bundle exec rake db:migrate RAILS_ENV=test'
 alias rollback='bundle exec rake db:rollback step=1 && bundle exec rake db:rollback step=1 RAILS_ENV=test'
 alias resetdb='bundle exec rake db:drop db:create db:setup db:test:prepare'
+alias snvm='source $(brew --prefix nvm)/nvm.sh'
 
 # Rubo Cop
 alias rubo-check='git diff-tree -r --no-commit-id --name-only head origin/master | xargs rubocop'
 alias rubo-correct='git diff-tree -r --no-commit-id --name-only head origin/master | xargs rubocop --auto-correct'
 
 # Postgres installation with ASDF
-source /usr/local/opt/asdf/asdf.sh
+source ~/.asdf/asdf.sh
+source ~/.asdf/completions/asdf.bash
 
-export PATH=$PATH:`pwd`/flutter/bin
